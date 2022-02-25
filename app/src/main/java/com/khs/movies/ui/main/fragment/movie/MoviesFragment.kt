@@ -179,7 +179,6 @@ class MoviesFragment(
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             _adapterPopular = adapter
             this.adapter = _adapterPopular
-            setUpOverScrollAndFixedSize()
         }
 
         with(_binding.rvUpcomingMovies) {
