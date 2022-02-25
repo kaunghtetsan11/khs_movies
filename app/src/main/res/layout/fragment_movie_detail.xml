@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.khs.movies.model.domain.MovieDetail" />
+
+        <import
+            alias="Get"
+            type="com.khs.movies.ui.main.viewmodel.GetterKt" />
+
+        <import
+            alias="Converter"
+            type="com.khs.movies.binding.BindingConverterKt" />
+
+        <variable
+            name="viewModel"
+            type="com.khs.movies.ui.main.viewmodel.MainViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/check_favorite"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textOff=""
+            android:textOn=""
+            android:checked="@{item.isPopular ? Get.getMoviesDetailFields(viewModel).popularMovie.isFavorite : Get.getMoviesDetailFields(viewModel).upcomingMovie.isFavorite}"
+            android:background="@drawable/favorite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_movie_poster"
+            imageUrl="@{item.posterPath}"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_170dp"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/largeLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="@{item.title}"
+            android:textSize="@dimen/text_18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/item_movie_poster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_movie_poster"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/smallLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="@{item.overview}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_movie_poster" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

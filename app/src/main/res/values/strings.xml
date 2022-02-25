@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="text_ok">OK</string>
+    <string name="text_error">Error</string>
+    <string name="text_success">Success</string>
+    <string name="text_info">Info</string>
+    <string name="text_warning">Warning</string>
+    <string name="error_network_timeout">Network Timeout.</string>
+    <string name="error_unknown">Unknown error occurred.</string>
+    <string name="error_cache_timeout">Cache Timeout.</string>
+    <string name="error_db">Error occurred in local database.</string>
+    <string name="error_poor_connection">Your connection is poor.</string>
+    <string name="error_empty_result">Result is empty.</string>
+    <string name="error_invalid_event">Invalid Event</string>
+    <string name="text_internet_required">Internet connection is required!</string>
+    <string name="text_internet_required_for_first_time">Internet connection is required for first time.</string>
+    <string name="back_press_exit">Press once again to exit!</string>
+    <string name="popular">Popular</string>
+    <string name="most_popular_movies">Most popular movies</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_load_cache">Load From Cache</string>
+    <string name="error_no_result_found">No Result Found.</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="add_to_favorite">This movie is added to favorite list.</string>
+    <string name="retry">Retry</string>
+
+</resources>

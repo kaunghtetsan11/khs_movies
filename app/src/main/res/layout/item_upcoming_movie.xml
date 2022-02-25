@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.khs.movies.persistance.entitiy.UpcomingMovie" />
+
+        <variable
+            name="isShowDiv"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_movie_poster"
+            imageUrl="@{item.posterPath}"
+            android:layout_width="@dimen/_130dp"
+            android:layout_height="@dimen/_170dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY"
+            tool:src="@drawable/ic_movie" />
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/check_favorite"
+            android:layout_marginTop="@dimen/_4dp"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            android:checked="@{item.favorite}"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/favorite"
+            app:layout_constraintEnd_toEndOf="@id/item_movie_poster"
+            app:layout_constraintTop_toTopOf="@id/item_movie_poster"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
