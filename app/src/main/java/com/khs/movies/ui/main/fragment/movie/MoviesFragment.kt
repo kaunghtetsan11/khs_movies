@@ -18,8 +18,6 @@ import com.khs.movies.ui.main.fragment.movie.adapter.PopularMovieAdapter
 import com.khs.movies.ui.main.fragment.movie.adapter.UpcomingMovieAdapter
 import com.khs.movies.ui.main.state.MainStateEvent
 import com.khs.movies.ui.main.viewmodel.*
-import com.khs.movies.util.ext.setUpOverScrollAndFixedSize
-import com.khs.movies.util.framework.AppConnectivityManager
 import com.khs.movies.util.framework.AppExecutors
 import com.khs.movies.util.framework.LiveConnection
 import kotlinx.coroutines.delay
