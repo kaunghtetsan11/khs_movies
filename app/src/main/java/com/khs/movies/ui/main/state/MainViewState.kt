@@ -1,11 +1,9 @@
 package com.khs.movies.ui.main.state
 
-import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import com.khs.movies.model.common.Event
 import com.khs.movies.persistance.entitiy.PopularMovie
 import com.khs.movies.persistance.entitiy.UpcomingMovie
-import com.khs.movies.util.framework.AppConnectivityManager
 
 
 data class MainViewState(
