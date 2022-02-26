@@ -203,7 +203,6 @@ class MoviesFragment(
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             _adapterUpcoming = adapter
             this.adapter = _adapterUpcoming
-            setUpOverScrollAndFixedSize()
         }
 
     }
